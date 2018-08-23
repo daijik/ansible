@@ -1,0 +1,5 @@
+---
+- hosts: all
+  tasks: 
+  - name: 存在しないパッケージをアップデートしようとする。（エラーとなる）
+    yum: name=mavenjjjjj state=latest
