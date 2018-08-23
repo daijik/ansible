@@ -2,6 +2,5 @@
 - hosts: all
   remote_user: root 
   tasks: 
-- name: pingしてみる
+  - name: pingしてみる
     ping:
-    
