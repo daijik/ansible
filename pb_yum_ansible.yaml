@@ -1,0 +1,6 @@
+---
+- hosts: all
+  tasks: 
+  - name: Ansibleパッケージを最新版にする
+    yum: name=ansible state=latest
+    
