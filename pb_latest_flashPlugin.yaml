@@ -1,0 +1,5 @@
+---
+- hosts: all
+  tasks: 
+  - name: Flash Pluginパッケージを最新版にする
+    yum: name=flash-plugin state=latest
