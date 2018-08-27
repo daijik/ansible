@@ -1,0 +1,5 @@
+---
+- hosts: all
+  tasks: 
+  - name: libvirtd を再起動する
+    systemd: name=libvirtd state=restarted
