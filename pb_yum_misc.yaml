@@ -15,3 +15,5 @@
     yum: name=glusterfs state=latest
   - name: dracut パッケージを最新版にする (added 2018/08/27)
     yum: name=dracut state=latest
+  - name: libmspack パッケージを最新版にする (added 2018/08/27)
+    yum: name=libmspack state=latest
