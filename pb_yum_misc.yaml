@@ -13,3 +13,5 @@
     yum: name=libvirt-daemon-kvm state=latest
   - name: glusterfs パッケージを最新版にする (added 2018/08/27)
     yum: name=glusterfs state=latest
+  - name: dracut パッケージを最新版にする (added 2018/08/27)
+    yum: name=dracut state=latest
