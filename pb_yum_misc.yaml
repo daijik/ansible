@@ -7,3 +7,5 @@
     yum: name=util-linux state=latest
   - name: samba-clientパッケージを最新版にする
     yum: name=samba-client state=latest
+  - name: gitパッケージを最新版にする
+    yum: name=git state=latest
