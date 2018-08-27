@@ -9,5 +9,5 @@
     yum: name=samba-client state=latest
   - name: gitパッケージを最新版にする
     yum: name=git state=latest
-  - name: libvirt-daemon-kvm パッケージを最新版にする (added: 2018/08/27)
+  - name: libvirt-daemon-kvm パッケージを最新版にする (added 2018/08/27)
     yum: name=libvirt-daemon-kvm state=latest
