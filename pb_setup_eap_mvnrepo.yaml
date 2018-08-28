@@ -4,6 +4,7 @@
     eap_archive_name: jboss-eap-7.1.0-maven-repository.zip
     dm_archive_name: rhdm-7.0.1-maven-repository.zip
     mvn_repo_dir: mvn_repo
+    dm_repo_dir: rhdm-7.0.1-maven-repository
   tasks: 
   - name: EAP 7.1.0 のmaven repositoryのアーカイブを配布する
     copy: 
@@ -15,7 +16,7 @@
         owner: daijik
         group: daijik
         mode: "u=rw,g=r,o=r"
-  - name: Mavenリポジトリ用のディレクトリを作成
+  - name: EAP用Mavenリポジトリ用のディレクトリを作成
     file:
         path: ~/{{mvn_repo_dir}}
         state: directory
@@ -35,8 +36,12 @@
         owner: daijik
         group: daijik
         mode: "u=rw,g=r,o=r"
+  - name: DM用Mavenリポジトリ用のディレクトリを作成
+    file:
+        path: ~/{{mvn_repo_dir}}/{{dm_repo_dir}}
+        state: directory
   - name: DMのMavenリポジトリのアーカイブを展開
     unarchive:
         src: ~/tmp/{{dm_archive_name}}
-        dest: ~/{{mvn_repo_dir}}
+        dest: ~/{{mvn_repo_dir}}/{{dm_repo_dir}}
         remote_src: yes
