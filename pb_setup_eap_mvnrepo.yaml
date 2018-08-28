@@ -1,23 +1,26 @@
 ---
 - hosts: all
+  vars:
+    eap_archive_name: jboss-eap-7.1.0-maven-repository.zip
+    dm_archive_name: rhdm-7.0.1-maven-repository.zip
   tasks: 
   - name: EAP 7.1.0 のmaven repositoryのアーカイブを配布する
     copy: 
-        src: /home/awx/mvn_repo/jboss-eap-7.1.0-maven-repository.zip 
-        dest: ~/tmp/jboss-eap-7.1.0-maven-repository.zip
+        src: /home/awx/mvn_repo/{{eap_archive_name}}
+        dest: ~/tmp/{{eap_archive_name}}
   - name: ファイルの所有者を変更
     file:
-        path: ~/tmp/jboss-eap-7.1.0-maven-repository.zip
+        path: ~/tmp/{{eap_archive_name}}
         owner: daijik
         group: daijik
         mode: "u=rw,g=r,o=r"
   - name: RHDM 7.0.1 のmaven repositoryのアーカイブを配布する
     copy: 
-        src: /home/awx/mvn_repo/rhdm-7.0.1-maven-repository.zip
-        dest: ~/tmp/rhdm-7.0.1-maven-repository.zip
+        src: /home/awx/mvn_repo/{{dm_archive_name}}
+        dest: ~/tmp/{{dm_archive_name}}
   - name: ファイルの所有者を変更
     file:
-        path: ~/tmp/rhdm-7.0.1-maven-repository.zip
+        path: ~/tmp/{{dm_archive_name}}
         owner: daijik
         group: daijik
         mode: "u=rw,g=r,o=r"
