@@ -3,7 +3,7 @@
   vars:
     eap_archive_name: jboss-eap-7.1.0-maven-repository.zip
     dm_archive_name: rhdm-7.0.1-maven-repository.zip
-    mvn_repo_dir: ~/mvn_repo
+    mvn_repo_dir: mvn_repo
   tasks: 
   - name: EAP 7.1.0 のmaven repositoryのアーカイブを配布する
     copy: 
@@ -17,12 +17,12 @@
         mode: "u=rw,g=r,o=r"
   - name: Mavenリポジトリ用のディレクトリを作成
     file:
-        path: {{mvn_repo_dir}}
+        path: ~/{{mvn_repo_dir}}
         state: directory
   - name: EAPのMavenリポジトリのアーカイブを展開
     unarchive:
         src: ~/tmp/{{eap_archive_name}}
-        dest: {{mvn_repo_dir}}
+        dest: ~/{{mvn_repo_dir}}
         remote_src: yes
 
   - name: RHDM 7.0.1 のmaven repositoryのアーカイブを配布する
@@ -38,5 +38,5 @@
   - name: DMのMavenリポジトリのアーカイブを展開
     unarchive:
         src: ~/tmp/{{dm_archive_name}}
-        dest: {{mvn_repo_dir}}
+        dest: ~/{{mvn_repo_dir}}
         remote_src: yes
