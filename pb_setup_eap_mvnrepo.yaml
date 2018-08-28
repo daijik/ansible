@@ -5,6 +5,7 @@
     copy: 
         src: /root/mvn_repo/jboss-eap-7.1.0-maven-repository.zip 
         dest: /tmp/jboss-eap-7.1.0-maven-repository.zip
+  - name: ファイルの所有者を変更
     file:
         path: /tmp/jboss-eap-7.1.0-maven-repository.zip
         owner: daijik
