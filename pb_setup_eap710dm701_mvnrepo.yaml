@@ -45,3 +45,12 @@
         src: ~/tmp/{{dm_archive_name}}
         dest: ~/{{mvn_repo_dir}}/{{dm_repo_dir}}
         remote_src: yes
+
+  - name: .m2ディレクトリの存在確認
+    file:
+        path: ~/.m2
+        state: directory
+  - name: settingx.xmlファイルの作成
+    copy:
+        src: /home/awx/mvn_repo/settings_eap710dm701.xml
+        dest: ~/.m2/settings.xml
