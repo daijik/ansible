@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks: 
+  - name: EAP 7.1.0 のmaven repositoryのアーカイブを配布する
+    copy: 
+        src: /root/mvn_repo/jboss-eap-7.1.0-maven-repository.zip 
+        dest: /tmp/jboss-eap-7.1.0-maven-repository.zip
