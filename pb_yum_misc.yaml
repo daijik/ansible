@@ -17,3 +17,5 @@
     yum: name=dracut state=latest
   - name: libmspack パッケージを最新版にする (added 2018/08/27)
     yum: name=libmspack state=latest
+  - name: tree パッケージを最新版にする (added 2018/08/28)
+    yum: name=tree state=latest
