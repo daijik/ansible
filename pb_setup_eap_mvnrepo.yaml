@@ -10,4 +10,14 @@
         path: ~/tmp/jboss-eap-7.1.0-maven-repository.zip
         owner: daijik
         group: daijik
-        mode: "u=rwx,g=rx,o=rx"
+        mode: "u=rw,g=r,o=r"
+  - name: RHDM 7.0.1 のmaven repositoryのアーカイブを配布する
+    copy: 
+        src: /home/awx/mvn_repo/rhdm-7.0.1-maven-repository.zip
+        dest: ~/tmp/rhdm-7.0.1-maven-repository.zip
+  - name: ファイルの所有者を変更
+    file:
+        path: ~/tmp/rhdm-7.0.1-maven-repository.zip
+        owner: daijik
+        group: daijik
+        mode: "u=rw,g=r,o=r"
