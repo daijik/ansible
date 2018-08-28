@@ -5,3 +5,8 @@
     copy: 
         src: /root/mvn_repo/jboss-eap-7.1.0-maven-repository.zip 
         dest: /tmp/jboss-eap-7.1.0-maven-repository.zip
+    file:
+        path: /tmp/jboss-eap-7.1.0-maven-repository.zip
+        owner: daijik
+        group: daijik
+        mode: "u=rwx,g=rx,o=rx"
