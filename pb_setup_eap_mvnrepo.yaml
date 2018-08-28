@@ -22,7 +22,7 @@
   - name: EAPのMavenリポジトリのアーカイブを展開
     unarchive:
         src: ~/tmp/{{eap_archive_name}}
-        dest: ~/mvn_repo
+        dest: {{mvn_repo_dir}}
         remote_src: yes
 
   - name: RHDM 7.0.1 のmaven repositoryのアーカイブを配布する
@@ -35,12 +35,8 @@
         owner: daijik
         group: daijik
         mode: "u=rw,g=r,o=r"
-  - name: Mavenリポジトリ用のディレクトリを作成
-    file:
-        path: {{mvn_repo_dir}}
-        state: directory
   - name: DMのMavenリポジトリのアーカイブを展開
     unarchive:
         src: ~/tmp/{{dm_archive_name}}
-        dest: ~/mvn_repo
+        dest: {{mvn_repo_dir}}
         remote_src: yes
