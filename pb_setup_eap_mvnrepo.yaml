@@ -3,11 +3,11 @@
   tasks: 
   - name: EAP 7.1.0 のmaven repositoryのアーカイブを配布する
     copy: 
-        src: /root/mvn_repo/jboss-eap-7.1.0-maven-repository.zip 
-        dest: /tmp/jboss-eap-7.1.0-maven-repository.zip
+        src: /var/lib/awx/mvn_repo/jboss-eap-7.1.0-maven-repository.zip 
+        dest: ~/tmp/jboss-eap-7.1.0-maven-repository.zip
   - name: ファイルの所有者を変更
     file:
-        path: /tmp/jboss-eap-7.1.0-maven-repository.zip
+        path: ~/tmp/jboss-eap-7.1.0-maven-repository.zip
         owner: daijik
         group: daijik
         mode: "u=rwx,g=rx,o=rx"
