@@ -19,3 +19,5 @@
     yum: name=libmspack state=latest
   - name: tree パッケージを最新版にする (added 2018/08/28)
     yum: name=tree state=latest
+  - name: tmux パッケージを最新版にする (added 2018/09/03)
+    yum: name=tmux state=latest
