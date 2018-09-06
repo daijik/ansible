@@ -21,3 +21,7 @@
     yum: name=tree state=latest
   - name: tmux パッケージを最新版にする (added 2018/09/03)
     yum: name=tmux state=latest
+  - name: qemu-kvm パッケージを最新版にする (added 2018/09/06)
+    yum: name=qemu-kvm state=latest
+  - name: systemd パッケージを最新版にする (added 2018/09/06)
+    yum: name=systemd state=latest
