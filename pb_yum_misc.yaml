@@ -35,3 +35,8 @@
     yum: name=flash-plugin state=latest
   - name: bind-utils パッケージを最新版にする (added 2018/09/18)
     yum: name=bind-utils state=latest
+  - name: google-chrome-stable パッケージを最新版にする (added 2018/09/18)
+    yum: name=google-chrome-stable state=latest
+  - name: selinux-policy パッケージを最新版にする (added 2018/09/18)
+    yum: name=selinux-policy state=latest
+    
