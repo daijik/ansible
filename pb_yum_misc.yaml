@@ -25,3 +25,13 @@
     yum: name=qemu-kvm state=latest
   - name: systemd パッケージを最新版にする (added 2018/09/06)
     yum: name=systemd state=latest
+  - name: ansible パッケージを最新版にする (added 2018/09/18)
+    yum: name=ansible state=latest
+  - name: firefox パッケージを最新版にする (added 2018/09/18)
+    yum: name=firefox state=latest
+  - name: audit パッケージを最新版にする (added 2018/09/18)
+    yum: name=audit state=latest
+  - name: flash-plugin パッケージを最新版にする (added 2018/09/18)
+    yum: name=flash-plugin state=latest
+  - name: bind-utils パッケージを最新版にする (added 2018/09/18)
+    yum: name=bind-utils state=latest
