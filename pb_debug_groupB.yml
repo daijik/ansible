@@ -1,0 +1,7 @@
+---
+- hosts: groupB
+  tasks: 
+  - name: print variable
+    debug: 
+      msg: "{{ myVar }}"
+      
