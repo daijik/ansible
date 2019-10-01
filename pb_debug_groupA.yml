@@ -6,5 +6,5 @@
       msg: "{{ myVar }}"
   - name: print group name
     debug:
-      msg: "Group Name is : {{ group-names }}"
+      msg: "Group Name is : {{ group_names }}"
       
