@@ -4,4 +4,7 @@
   - name: print variable
     debug: 
       msg: "{{ myVar }}"
+  - name: print group name
+    debug:
+      msg: "Group Name is : {{ group-names }}"
       
