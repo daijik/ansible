@@ -1,0 +1,10 @@
+---
+- name: Apache server はインストールされていない
+  hosts: all
+  become: yes
+  tasks:
+  - name: No httpd installed. 
+    yum:
+      name: httpd
+      state: absent
+      
