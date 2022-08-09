@@ -1,0 +1,9 @@
+---
+- name: Git UNinstalled
+  hosts: web
+  become: yes
+  tasks:
+  - name: latest Git version UNinstalled
+    yum:
+      name: git
+      state: absent
