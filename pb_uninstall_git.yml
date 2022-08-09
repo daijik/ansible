@@ -7,3 +7,11 @@
     yum:
       name: git
       state: absent
+  - name: latest Git version UNinstalled
+    yum:
+      name: git-core
+      state: absent
+  - name: latest Git version UNinstalled
+    yum:
+      name: git-core-doc
+      state: absent
