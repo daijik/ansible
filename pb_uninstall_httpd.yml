@@ -1,6 +1,6 @@
 ---
 - name: Apache server はインストールされていない
-  hosts: all
+  hosts: web
   become: yes
   tasks:
   - name: No httpd installed. 
