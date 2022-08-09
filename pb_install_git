@@ -1,2 +1,0 @@
-  - name: gitパッケージを最新版にする
-    yum: name=git state=latest
